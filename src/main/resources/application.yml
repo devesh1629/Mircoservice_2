@@ -1,0 +1,27 @@
+spring:
+  #  cache:
+  #    type: redis
+  #    host: localhost
+  #    port: 6379
+  #    redis:
+  #      time-to-live: 60000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/redis_cache_db
+    username: root
+    password: rootpass
+  jpa:
+    hibernate:
+      ddl-auto: true
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: false
+    properties:
+      hibernate.id.new_generator_mappings: false
+
+api:
+  host: http://localhost:1629
+  test-url: /api/test-get-api
+
+server:
+  port: 1999
